@@ -17,8 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get("/homepage", function () {
-    return "<h1>This is home page</h1>";
+    return "<h1>This is home page :</h1>";
+});
+
+Route::get("/blog/{id}", function ($id) {
+    return "<h1>This is blog page : {$id} </h1>";
 });
 
 Route::get("/blog/{id}/edit", function ($id) {
@@ -34,8 +39,10 @@ Route::get("/hello", function () {
 });
 
 Route::get('/greeting', function () {
-    $name = 'James';
-    $last_name = 'Mars';
+
+    $name = 'Phaninthorn';
+    $last_name = 'Nongtakrai';
+
     return view('greeting', compact('name', 'last_name'));
 });
 
@@ -49,18 +56,45 @@ Route::get("/gallery", function () {
     return view("test/index", compact("ant", "bird", "cat", "god", "spider"));
 });
 
-
 Route::get("/gallery/ant", function () {
     $ant = "https://cdn3.movieweb.com/i/article/Oi0Q2edcVVhs4p1UivwyyseezFkHsq/1107:50/Ant-Man-3-Talks-Michael-Douglas-Update.jpg";
     return view("test/ant", compact("ant"));
 });
 
 Route::get("/gallery/bird", function () {
-    $bird = "https://www.hebergementwebs.com/image/cc/cc8811773d2cdbeb4d46e5550fc455fe.jpg/falcon-and-the-winter-soldier-falcon-minifigure-captain-america.jpg";
+    $bird = "https://images.indianexpress.com/2021/03/falcon-anthony-mackie-1200.jpg";
     return view("test/bird", compact("bird"));
 });
 
 Route::get("/gallery/cat", function () {
     $cat = "http://www.onyxtruth.com/wp-content/uploads/2017/06/black-panther-movie-onyx-truth.jpg";
     return view("test/cat", compact("cat"));
+});
+
+// Route Template Inheritance
+Route::get("/teacher/inheritance", function () {
+    return view("teacher-inheritance");
+});
+Route::get("/student/inheritance", function () {
+    return view("student-inheritance");
+});
+
+// Route Template Component
+Route::get("/teacher/component", function () {
+    return view("teacher-component");
+});
+Route::get("/student/component", function () {
+    return view("student-component");
+});
+
+Route::get('/tables', function () {
+    return view('tables');
+});
+
+Route::get("/tables/component", function () {
+    return view("tables-component");
+});
+
+Route::get("/themequiz", function () {
+    return view("themequiz");
 });
