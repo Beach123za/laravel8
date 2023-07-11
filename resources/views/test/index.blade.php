@@ -3,11 +3,11 @@
 
 <body>
     <h2>HTML Image</h2>
-    ant<a href=" gallery/ant"><img src="{{ $ant  }}" alt="Trulli" width="300" height="333">
+    ant<a href=" newgallery/ant"><img src="{{ $ant  }}" alt="Trulli" width="300" height="333">
 
-        bird<a href=" gallery/bird"><img src="{{ $bird  }}" alt="Trulli" width="300" height="333">
+        bird<a href=" newgallery/bird"><img src="{{ $bird  }}" alt="Trulli" width="300" height="333">
 
-            cat<a href=" gallery/cat"><img src="{{ $cat  }}" alt="Trulli" width="300" height="333">
+            cat<a href=" newgallery/cat"><img src="{{ $cat  }}" alt="Trulli" width="300" height="333">
 
                 <img src="{{ $god  }}" alt="Trulli" width="300" height="333">
 
