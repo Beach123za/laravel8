@@ -2,6 +2,11 @@
 
 namespace App\Providers;
 
+use Illuminate\Contracts\Pagination\Paginator;
+use Illuminate\Pagination\AbstractPaginator;
+use Illuminate\Pagination\CursorPaginator;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator as PaginationPaginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,5 +29,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        AbstractPaginator::useBootstrap();
     }
 }
